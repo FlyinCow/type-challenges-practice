@@ -20,7 +20,8 @@
 type MyAwaited<T extends Promise<any>> =
     T extends Promise<infer U> ?
         U extends Promise<any> ?
-            MyAwaited<U> : U
+            MyAwaited<U> 
+            : U
         : never;
 
 /* _____________ 测试用例 _____________ */
